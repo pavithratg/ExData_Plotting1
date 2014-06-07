@@ -8,6 +8,6 @@ transform.data <- transform(dataset,Date=as.Date(strptime(Date,"%d/%m/%Y")),Time
 png("plot1.png", width = 480, height = 480)
 
 ##Creating the histogram
-hist(as.numeric(transform.data$Global_active_power),col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
+hist(as.numeric(transform.data$Global_active_power),col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)",cex.axis=1,cex.lab = 1)
 
 dev.off()

@@ -8,6 +8,6 @@ transform.data <- transform(dataset,Date=as.Date(strptime(Date,"%d/%m/%Y")),Time
 png("plot2.png", width = 480, height = 480)
 
 ##Generating the plot
-plot(transform.data$Time,as.numeric(transform.data$Global_active_power),type="l",ylab="Global Active Power (kilowatts)",xlab="")
+plot(transform.data$Time,as.numeric(transform.data$Global_active_power),type="l",ylab="Global Active Power (kilowatts)",xlab=NA,cex.axis=.9,cex.lab = .9)
 
 dev.off()
