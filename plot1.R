@@ -5,7 +5,7 @@ colnames(dataset) <- c("Date","Time","Global_active_power","Global_reactive_powe
 transform.data <- transform(dataset,Date=as.Date(strptime(Date,"%d/%m/%Y")),Time=strptime(paste(Date,Time,sep=" "),"%d/%m/%Y %H:%M:%S"))
 
 ##Creating the histogram
-hist(as.numeric(data$Global_active_power),col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
+hist(as.numeric(transform.data$Global_active_power),col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
 
 ##Creating the PNG file
 dev.copy(png,file="plot1.png")
