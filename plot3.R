@@ -8,7 +8,7 @@ transform.data <- transform(dataset,Date=as.Date(strptime(Date,"%d/%m/%Y")),Time
 png("plot3.png", width = 480, height = 480)
 
 ##Generating the plot
-plot(transform.data$Time,as.numeric(transform.data$Sub_metering_1),type="l",ylab="Energy sub metering",xlab="",cex.axis=.9,cex.lab = .9)
+plot(transform.data$Time,as.numeric(transform.data$Sub_metering_1),type="l",ylab="Energy sub metering",xlab=NA,cex.axis=.9,cex.lab = .9)
 lines(transform.data$Time,as.numeric(transform.data$Sub_metering_2),col="red")
 lines(transform.data$Time,as.numeric(transform.data$Sub_metering_3),col="blue")
 legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),col=c("black","red","blue"),lty=1,cex=1)
